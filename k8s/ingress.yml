@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: sparkjava-ingress
+ namespace: sparkjava
+spec:
+ rules:
+ - host: static.joshna.xyz
+   http:
+     paths:
+     - path: 
+       backend:
+         serviceName: sparkjava-svc
+         servicePort: 8080

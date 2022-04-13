@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sparkjava-dept
+  namespace: sparkjava
+spec:
+  selector:
+    matchLabels:
+      app: sparkjava-dept
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: sparkjava-dept
+    spec:
+      containers:
+      - name: java-application
+        image: 
+        ports:
+        - containerPort: 8080
